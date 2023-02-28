@@ -15,8 +15,9 @@ public class GreetingController {
     private final AtomicLong counter = new AtomicLong();
 
     @GetMapping("/greeting")
-    public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
-        log.info("Request received : name : {}",name);
-        return new Greeting(counter.incrementAndGet(), String.format(template, name));
+    public Greeting greeting(@RequestParam(defaultValue = "World") String name,
+                             @RequestParam(defaultValue = "25") int age)  {
+        log.info("Request received : name : {} and age: {}",name, age);
+        return new Greeting(counter.incrementAndGet(), String.format(template, name), age);
     }
 }

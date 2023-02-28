@@ -14,9 +14,10 @@ A sample spring boot rest application and demo rest methods
 ### Spring Boot Annotations:
 1. SpringBootApplication
 2. SpringBootTest
-3. RestController
+3. RestController : The Spring boot `@RestController` annotation, which marks the class 
+as a controller where every method returns a domain object instead of a view. 
+It is shorthand for including both `@Controller` and `@ResponseBody`.
 4. GetMapping
 5. RequestParam
 
-
-mvc relation in above design
+### Reference [Tutorial](https://spring.io/guides/gs/rest-service/)
